@@ -11,29 +11,61 @@
 # production
 /build
 
-# misc
-.DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
+# Log files
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
+
+# Runtime data
+.DS_Store
+*.local
+*.lock (optional, lockfiles not used in PnP)
+.vscode/
+.idea/
+
+# Build outputs
+dist/
+.build/
+out/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+.env.development.local
+.env.test.local
+.env.production.local
 
 *.swp
 
 # Logs
 logs
 *.log
-pnpm-debug.log*
 lerna-debug.log*
+
+# Yarn PnP files that should be committed
+# These are the core of your dependencies in PnP
+!.yarnrc.yml
+!.yarn/releases/
+!.yarn/plugins/
+!.yarn/sdks/
+!.yarn/versions/
+!.pnp.cjs
+!.pnp.loader.mjs
+!.yarn/patches/
+!.yarn/cache/
+!.yarn/global/
+!.yarn/build-state.yml
+!.yarn/install-state.gz
+!.yarn/visitors/
+
+# Everything else in .yarn can be ignored
+.yarn/*
 
 node_modules
 dist
 dist-ssr
-*.local
 
 # Editor directories and files
 .vscode/*
