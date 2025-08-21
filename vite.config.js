@@ -11,8 +11,7 @@ export default defineConfig({
   },
   optimizeDeps: {
     exclude: [
-      '@zappar/zappar',
-      '@zappar/zappar-react-three-fiber'
+      '@zappar/zappar'
     ],
     include: [
       'ua-parser-js'
