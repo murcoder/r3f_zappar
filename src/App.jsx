@@ -4,6 +4,7 @@ import NavBar from "@/html/NavBar";
 import {Experience} from "./components/Experience";
 import {Button} from "./components/ui/button";
 
+// @see https://docs.zap.works/universal-ar/react-threejs/tracking/image-tracking/
 const targetFile = new URL('./assets/example-tracking-image.zpt', import.meta.url).href;
 
 function App () {
