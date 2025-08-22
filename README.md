@@ -1,9 +1,18 @@
-# Zappar for React-Three-Fiber
-## Webpack Bootstrap Project
+# Web AR React Boilerplate with ZappAR
 
-In this project you'll find an Node.js project that gets you up and running with Zappar for React-Three-Fiber.
+Boilerplate for a WebAR React app using [Zappar for React-Three-Fiber](https://www.npmjs.com/package/@zappar/zappar-react-three-fiber) with a modern tech stack:
 
-Head to the NPM package page for more information on how to build best-in-class AR experiences: [Zappar for React-Three-Fiber](https://www.npmjs.com/package/@zappar/zappar-react-three-fiber) (@zappar/zappar-react-three-fiber)
+## Tech Stack
+| Dependency                                        | Version | Description |
+|----------------------------------------------------|---------|-------------|
+| [React](https://reactjs.org/)                      | 18.2.0 | UI library for building reactive components |
+| [React Three Fiber (R3F)](https://docs.pmnd.rs/react-three-fiber/getting-started/introduction) | 8.15.12 | React renderer for ThreeJS, enables 3D graphics in React |
+| [ThreeJS](https://threejs.org/)                    | 0.159.0 | 3D graphics library for WebGL |
+| [Vite](https://vitejs.dev/)                        | 7.1.3  | Fast frontend build tool and development server |
+| [Tailwind CSS](https://tailwindcss.com/)          | 4.1.12 | Utility-first CSS framework for styling |
+| [Shadcn/UI](https://ui.shadcn.com/)               | 2.10.0 | Optional UI component library built on Tailwind |
+| [Zappar for R3F](https://www.npmjs.com/package/@zappar/zappar-react-three-fiber) | 2.1.0 | WebAR SDK for React Three Fiber, image & face tracking |
+
 
 ## Preview
 Scan the QR code below using your native camera app or QR code reader to view the example:
