@@ -17,7 +17,7 @@ Boilerplate for a WebAR React app using [Zappar for React-Three-Fiber](https://w
 ## Preview
 Scan the QR code below using your native camera app or QR code reader to view the example:
 ​
-![Preview QR Code"](preview-qr-code.png)
+![Preview QR Code"](qr_to_website.png)
 
 
 The project has been set up to use webpack for bundling assets and code. To get started, install the project's dependencies by running the following command:
