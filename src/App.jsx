@@ -5,7 +5,7 @@ import {Experience} from "./components/Experience";
 import {Button} from "./components/ui/button";
 
 // @see https://docs.zap.works/universal-ar/react-threejs/tracking/image-tracking/
-const targetFile = new URL('./assets/mindar.zpt', import.meta.url).href;
+const targetFile = new URL('./assets/zappar.zpt', import.meta.url).href;
 
 function App () {
   const [started, setStarted] = useState(false);
