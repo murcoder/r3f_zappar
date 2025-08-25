@@ -1,14 +1,15 @@
 import React, {useState} from 'react';
 import {ZapparCamera, ImageTracker, ZapparCanvas} from '@zappar/zappar-react-three-fiber';
-import NavBar from "@/html/NavBar";
+import NavBar from "@/components/NavBar";
 import {Experience} from "./components/Experience";
 import {Button} from "./components/ui/button";
 
 // @see https://docs.zap.works/universal-ar/react-threejs/tracking/image-tracking/
-const targetFile = new URL('./assets/example-tracking-image.zpt', import.meta.url).href;
+const targetFile = new URL('./assets/mindar.zpt', import.meta.url).href;
 
 function App () {
   const [started, setStarted] = useState(false);
+  const [targetFound, setTargetFound] = useState(false);
 
   return (
     <>
@@ -24,14 +25,20 @@ function App () {
       <ZapparCanvas className="absolute top-0 left-0 w-full h-full">
         <ZapparCamera/>
         <ImageTracker
-          onNotVisible={(anchor) => console.log(`Not visible ${anchor.id}`)}
           onNewAnchor={(anchor) => console.log(`New anchor ${anchor.id}`)}
-          onVisible={(anchor) => console.log(`Visible ${anchor.id}`)}
+          onVisible={() => {
+            console.log("Target visible");
+            setTargetFound(true);
+          }}
+          onNotVisible={() => {
+            console.log("Target not visible");
+            setTargetFound(false);
+          }}
           targetImage={targetFile}
         >
-          <Experience />
+          {targetFound && <Experience />}
         </ImageTracker>
-        <ambientLight intensity={0.3}/>
+        <ambientLight intensity={4}/>
         <directionalLight position={[2.5, 8, 5]} intensity={1.5} castShadow/>
       </ZapparCanvas>
       )}
